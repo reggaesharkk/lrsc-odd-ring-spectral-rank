@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the frozen OSF theorem record."
+title: "LRSC Odd-Ring Spectral Rank Theorem"
+type: software
+authors:
+  - family-names: "Upadhyay"
+    given-names: "Prince"
+date-released: "2026-09-24"
+version: "1.2"
+doi: "10.17605/OSF.IO/NM5BW"
+repository-code: "https://github.com/reggaesharkk/lrsc-odd-ring-spectral-rank"
+license: "CC-BY-4.0"
