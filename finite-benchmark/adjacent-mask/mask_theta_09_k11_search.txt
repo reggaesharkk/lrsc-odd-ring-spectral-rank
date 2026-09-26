@@ -1,0 +1,3 @@
+scale=10000000000000000; threshold_upper=5003948331; integer_absolute_upper=612363011822780471
+K=11; visited=37353738800; expected=37353738800; best_lower=5015646197; threshold_upper=5003948331; margin=11697866; subset=0,1,3,42,43,44,45,46,47,48,49
+STATUS=ENUMERATED
