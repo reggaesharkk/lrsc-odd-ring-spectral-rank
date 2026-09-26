@@ -59,4 +59,6 @@ python3 finite-benchmark/adjacent-mask/verify_search.py finite-benchmark/adjacen
 
 The stored search outputs are split by cardinality to make the decisive run explicit. Regenerated coefficient SHA-256 values are `613320d255dbb6200c70d4c82f78590bc713ebd44604f9f2e1fdd4016d523c72` at 0.09 and `e601007a5c00e47b0a1559cc2d890dc95122f3658ba551bafab53638393939d0` at 0.07. A separate floating FFT construction agrees on both masks and differs from the interval coefficients' endpoints by at most \(1.4\times10^{-14}\); this is an implementation cross-check, not the rigorous arithmetic basis.
 
+`independent_bitmask_k11.cpp` is provided as an optional second traversal. No completed output from it is claimed in this report; the exclusion certificate uses the completed recursive integer search and the Python winner-score check above.
+
 This finite threshold transition does not establish any continuum Navier–Stokes regularity estimate, a theorem for other LRSC parameter choices, or the unresolved exact minimum at \(\theta=0.07\).
