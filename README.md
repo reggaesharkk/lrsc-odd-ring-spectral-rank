@@ -43,3 +43,6 @@ or Navier–Stokes regularity. It is separate from the frozen v1.2 rank theorem.
 At the same fixed \(M,k_{\rm idx},A\), a [certified threshold plateau](finite-benchmark/THETA_ROBUSTNESS.md)
 extends the finite conclusion to every
 \(\theta\in[0.071206344,0.088346807]\) because the active mask is unchanged.
+The [amplitude-region corollary](finite-benchmark/AMPLITUDE_REGION.md) also
+covers \(A\in[0.475795,0.529975]\) at \(\theta=0.08\) and an explicit
+two-parameter region at fixed \(M,k_{\rm idx}\).
