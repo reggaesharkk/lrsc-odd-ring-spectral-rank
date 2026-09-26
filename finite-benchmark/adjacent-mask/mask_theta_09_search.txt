@@ -1,0 +1,12 @@
+scale=10000000000000000; threshold_upper=5003948331; integer_absolute_upper=506935366079469941
+K=1; visited=50; expected=50; best_lower=2673439265181; threshold_upper=5003948331; margin=2668435316850; subset=49
+K=2; visited=1225; expected=1225; best_lower=2409706589072; threshold_upper=5003948331; margin=2404702640741; subset=4,49
+K=3; visited=19600; expected=19600; best_lower=331507403233; threshold_upper=5003948331; margin=326503454902; subset=0,1,49
+K=4; visited=230300; expected=230300; best_lower=32493574295; threshold_upper=5003948331; margin=27489625964; subset=0,1,48,49
+K=5; visited=2118760; expected=2118760; best_lower=27903254554; threshold_upper=5003948331; margin=22899306223; subset=0,1,3,48,49
+K=6; visited=15890700; expected=15890700; best_lower=27377777741; threshold_upper=5003948331; margin=22373829410; subset=0,1,46,47,48,49
+K=7; visited=99884400; expected=99884400; best_lower=14963666512; threshold_upper=5003948331; margin=9959718181; subset=0,1,4,46,47,48,49
+K=8; visited=536878650; expected=536878650; best_lower=11670039834; threshold_upper=5003948331; margin=6666091503; subset=0,1,4,45,46,47,48,49
+K=9; visited=2505433700; expected=2505433700; best_lower=6256237711; threshold_upper=5003948331; margin=1252289380; subset=0,1,4,44,45,46,47,48,49
+K=10; visited=10272278170; expected=10272278170; best_lower=6159983416; threshold_upper=5003948331; margin=1156035085; subset=0,1,3,6,44,45,46,47,48,49
+STATUS=ENUMERATED
