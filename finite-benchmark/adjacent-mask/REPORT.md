@@ -13,6 +13,8 @@ At \(M=99\), \(k_{\rm idx}=49\), \(A=1/2\), and relative complex \(L_2\) toleran
 The \(\theta=0.09\) result holds on the closed rational subinterval
 \([0.088346808,\,0.107144346]\), because every stress-mask decision remains unchanged there. The adjacent exact stress boundaries are approximately \(0.088346807373177\) and \(0.107144346727594\). Likewise, the \(\theta=0.07\) rank *range* holds on \([0.055791974,\,0.071206343]\). The endpoints of these stated rational subintervals are strictly separated from the corresponding stress levels by interval arithmetic. They are conservative subintervals of the complete mask cells.
 
+The minimizing eleven-channel subset at 0.09 is the old 0.08 witness, \(\{0,1,3,42,43,44,45,46,47,48,49\}\). Its directly enclosed squared residual moves from approximately \(4.6725937774\times10^{-7}\) at 0.08 to \(5.0156462692\times10^{-7}\) at 0.09, while the squared acceptance threshold moves from approximately \(5.0451567155\times10^{-7}\) to \(5.0039483309\times10^{-7}\). This explains the observed failure of that subset; the exhaustive search is what rules out *every other* eleven-channel choice.
+
 ## Certificate at 0.09
 
 `interval_coefficients.py` reuses the rational outward-rounded construction in `../k001-certificate/lrsc_interval_certificate.py` at \(\theta=9/100\). This constructs all 50 channels and a target with integer interval arithmetic at scale \(10^{35}\), then exports lower bounds for \(c\), \(f_i\), and \(Q_{ij}\) at scale \(10^{16}\). For every subset \(S\), the resulting integer score is a rigorous lower bound on
