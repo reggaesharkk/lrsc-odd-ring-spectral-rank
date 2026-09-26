@@ -1,0 +1,32 @@
+{
+  "scope": "certified coefficient enclosures and selected witnesses; no certified full K<=10 search",
+  "grid_scale": "100000000000000000000000000000000000",
+  "pi_interval": [
+    "314159265358979323846264338327950280",
+    "314159265358979323846264338327950300"
+  ],
+  "active_nodes": 81,
+  "min_stress_threshold_distance_lower": 0.008346807373176937,
+  "uniform_coefficient_radius": "1/10000000000",
+  "max_width_c": 7.04e-33,
+  "max_width_f": 1.784e-32,
+  "max_width_Q": 9.9e-33,
+  "K10_selected_score_scaled_integer_interval": [
+    "54549592559845840451666731314",
+    "54549592559845840451666731514"
+  ],
+  "K11_witness_score_scaled_integer_interval": [
+    "46725937774006983998256510624",
+    "46725937774006983998256510826"
+  ],
+  "threshold_score_scaled_integer_interval": [
+    "50451567155458613003131581499930492",
+    "50451567155458613003131581499931196",
+    "divide by 1e6"
+  ],
+  "archived_search_counts_checked": true,
+  "archived_search_minimum_remaining_margin": 2.8880242533139215e-08,
+  "archived_search_status": "conditional on faithful full execution and asserted Gram/direct checks",
+  "K11_certified_pass": true,
+  "all_K_le_10_certified_exclusion": false
+}
