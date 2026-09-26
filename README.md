@@ -39,3 +39,7 @@ certificate supersedes its then-open search task.
 
 This finite benchmark does not establish a general LRSC compression theorem
 or Navier–Stokes regularity. It is separate from the frozen v1.2 rank theorem.
+
+At the same fixed \(M,k_{\rm idx},A\), a [certified threshold plateau](finite-benchmark/THETA_ROBUSTNESS.md)
+extends the finite conclusion to every
+\(\theta\in[0.071206344,0.088346807]\) because the active mask is unchanged.
