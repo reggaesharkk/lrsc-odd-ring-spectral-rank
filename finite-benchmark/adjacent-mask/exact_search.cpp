@@ -6,6 +6,7 @@
 // increasing prefix chosen[0..depth-1]. Every completion has a unique next
 // index x in [first, 50-(K-depth)], hence induction gives a bijection to the
 // K-subsets of {0,...,49}. The count is independently checked against C(50,K).
+#include <algorithm>
 #include <array>
 #include <cstdint>
 #include <cstdlib>
