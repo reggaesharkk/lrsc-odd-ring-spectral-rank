@@ -103,7 +103,7 @@ for M in (9, 11, 13, 15, 17, 19, 21, 23, 25):
         if p <= k:
             tot += 1; ok += (rW == p and rV == p)
             if p: min_gap_in = min(min_gap_in, sv[p - 1] / sv[0])
-            if p < len(sv): max_gap_out = max(max_gap_out, sv[p] / sv[0])
+            if p < len(sv) and sv[0] != 0: max_gap_out = max(max_gap_out, sv[p] / sv[0])
         else:
             allact.append((M, p, rW, rV))
 print(f"[4] exhaustive masks with >=1 inactive orbit, M=9..25: {ok}/{tot} have rank(W)=rank(V)=p")
