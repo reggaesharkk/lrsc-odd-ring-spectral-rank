@@ -19,55 +19,44 @@ The frozen v1.2 DOI remains:
 
 ### 1. Derivative typo in the v1.2.1 explanation
 
-For
-[
-f(x)=cos x,cos 2x,
-]
-the derivative is
-[
-f'(x)=-sin x,(cos 2x+4cos^2x),
-]
-not
-[
--sin x,(cos 2x+4cos x).
-]
+For `f(x) = cos(x) cos(2x)`, the derivative is
 
-On the interval used by the proof, (0<x<pi/4), the corrected bracket is
-strictly positive, so the required strict decrease of (f) and the
+`f'(x) = -sin(x) [cos(2x) + 4 cos^2(x)]`,
+
+not
+
+`-sin(x) [cos(2x) + 4 cos(x)]`.
+
+On the interval used by the proof, `0 < x < pi/4`, the corrected bracket is
+strictly positive, so the required strict decrease of `f` and the
 non-vanishing conclusion are unchanged.
 
-### 2. First admissible (M) in the (4L+1) class
+### 2. First admissible M in the 4L+1 class
 
 The v1.2.1 text says that the first admissible ring in this residue class is
-(M=13). The correct first admissible value is
+`M=13`. The correct first admissible value is
 
-[
-M=9=4cdot2+1.
-]
+`M=9=4*2+1`.
 
-The proof already uses the valid bound (alpha=pi/Mlepi/9). At (M=9),
-the step (cos(3alpha)ge1/2) reaches equality, so the argument remains
+The proof already uses the valid bound `alpha=pi/M <= pi/9`. At `M=9`,
+the step `cos(3 alpha) >= 1/2` reaches equality, so the argument remains
 valid.
 
-Neither correction changes the statement
-[
-operatorname{rank}(V)=p
-]
-under the v1.2 hypotheses.
+Neither correction changes the theorem statement `rank(V)=p` under the
+v1.2 hypotheses.
 
 ## Terminology clarification
 
 The theorem quantity and the finite benchmark quantity are different:
 
-- (operatorname{rank}(V)=p) is the **matrix/channel-space rank** from the
-  odd-ring theorem.
-- (K_{0.001}) is the **minimum passing channel-subset cardinality** in a
+- `rank(V)=p` is the **matrix/channel-space rank** from the odd-ring theorem.
+- `K_0.001` is the **minimum passing channel-subset cardinality** in a
   specified finite benchmark.
 
 The values 11, 12, and 14 in the M=99 threshold cells are therefore not
 matrix ranks. The unambiguous notation is:
 
-| threshold | active reflection orbits (p) | theorem rank (operatorname{rank}(V)) | minimum passing cardinality (K_{0.001}) |
+| threshold | active reflection orbits p | theorem rank rank(V) | minimum passing cardinality K_0.001 |
 |---:|---:|---:|---:|
 | 0.07 | 42 | 42 | 14 |
 | 0.08 | 41 | 41 | 11 |
@@ -83,15 +72,15 @@ definitions. It does not import the repository theorem verifier.
 The recorded run checks:
 
 - direct local-min shedding field against the closed form at 50-digit precision;
-- 11,319 Fourier coefficients for odd (M=9,ldots,301);
-- every odd (M=9,ldots,40001) in the inequality-chain sweep;
+- 11,319 Fourier coefficients for odd `M=9,...,301`;
+- every odd `M=9,...,40001` in the inequality-chain sweep;
 - all 16,343 reflection-symmetric masks with at least one inactive orbit for
-  (M=9,11,ldots,25);
-- the benchmark stress masks at (M=99,101,127);
+  `M=9,11,...,25`;
+- the benchmark stress masks at `M=99,101,127`;
 - 900 additional random masks on those three rings.
 
 The output reports no non-vanishing inequality violations and reproduces
-(operatorname{rank}(V)=41,42,52) at (M=99,101,127).
+`rank(V)=41,42,52` at `M=99,101,127`.
 
 A one-line diagnostic guard was added to the archived runnable copy so the
 all-zero mask does not divide by a zero leading singular value when reporting
@@ -99,17 +88,17 @@ a discarded-singular-value ratio. That guard does not change any rank test.
 
 ## Independent finite-benchmark reconstruction
 
-`source/part2_build.py` rebuilds the fixed (M=99), (k_{idx}=49),
-(A=1/2) target and all 50 channels directly in real space at 50-digit
+`source/part2_build.py` rebuilds the fixed `M=99`, `k_idx=49`,
+`A=1/2` target and all 50 channels directly in real space at 50-digit
 precision. It then exports float64 vectors for an independent subset search.
 
 The reconstruction gives:
 
-| threshold | active nodes | active orbits | last failing residual | first passing residual | (K_{0.001}) |
+| threshold | active nodes | active orbits | last failing residual | first passing residual | K_0.001 |
 |---:|---:|---:|---:|---:|---:|
-| 0.07 | 83 | 42 | (K=13: 0.001070386927) | (K=14: 0.000974040815) | **14** |
-| 0.08 | 81 | 41 | (K=10: 0.001039820619) | (K=11: 0.000962369128) | **11** |
-| 0.09 | 79 | 40 | (K=11: 0.001001168188) | (K=12: 0.000947945578) | **12** |
+| 0.07 | 83 | 42 | K=13: 0.001070386927 | K=14: 0.000974040815 | **14** |
+| 0.08 | 81 | 41 | K=10: 0.001039820619 | K=11: 0.000962369128 | **11** |
+| 0.09 | 79 | 40 | K=11: 0.001001168188 | K=12: 0.000947945578 | **12** |
 
 The decisive searches were repeated in two orthonormal coordinate systems:
 the direct reflection-even basis and an SVD/PCA basis. Both produce the same
@@ -121,11 +110,11 @@ independent numerical corroboration, not a replacement for the repository's
 outward-rounded interval and exact-integer certificates. The rigorous
 certificates remain the basis for the formal finite claims.
 
-## Structural observation at (	heta=0.07)
+## Structural observation at theta=0.07
 
 The mask change from 0.08 to 0.07 activates nodes 41 and 58. Those are odd
-sites of the near-Nyquist shedding field, where (j=0). Consequently the
-target (E=S(mj)) is unchanged between these two cells, while the masked
+sites of the near-Nyquist shedding field, where `j=0`. Consequently the
+target `E=S(mj)` is unchanged between these two cells, while the masked
 channel family changes. This explains why the minimum passing cardinality can
 move from 11 to 14 even though the target itself is unchanged.
 
@@ -153,5 +142,5 @@ The archived outputs are under `output/`.
 
 This supplement strengthens auditability of the stated odd-ring theorem and
 three finite M=99 mask cells. It does not enlarge the theorem beyond its
-single-step odd-ring hypotheses, make (K_{0.001}) universal, establish a
+single-step odd-ring hypotheses, make `K_0.001` universal, establish a
 multi-step dynamical result, or imply a continuum fluid theorem.
