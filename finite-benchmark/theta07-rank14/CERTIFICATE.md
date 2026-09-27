@@ -1,4 +1,4 @@
-# Certified rank 14 in the lower adjacent LRSC mask cell
+# Certified minimum passing channel cardinality at the lower adjacent LRSC mask cell
 
 For the LRSC v1.1.1 finite benchmark at \(M=99\), \(k_{\rm idx}=49\), \(A=1/2\), \(\theta=0.07\), and relative complex \(L_2\) tolerance \(10^{-3}\), the minimum passing channel cardinality is
 
@@ -68,3 +68,12 @@ done
 ```
 
 The stored coordinate input has SHA-256 `aa9848207230ac8776d90869dfdcd74f383f4a80067f8a02846fdc9a53f49af7`. The output logs `rigorous_k11.txt`, `rigorous_k12.txt`, and `rigorous_k13.txt` record all depth counts and the completed status.
+
+
+## Terminology note
+
+The certified value (K_{0.001}=14) is a **minimum passing channel-subset
+cardinality**, not the matrix rank from the odd-ring theorem. In this
+(	heta=0.07) cell there are 42 active reflection orbits, so the separate
+theorem quantity is (operatorname{rank}(V)=42). The historical directory
+name `theta07-rank14` is retained only to preserve stable repository links.

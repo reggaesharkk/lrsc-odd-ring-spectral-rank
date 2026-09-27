@@ -15,10 +15,13 @@ does **not** imply a universal fixed-unit compression number.
 
 - Frozen theorem: [`odd-ring-rank-theorem/v1.2/`](odd-ring-rank-theorem/v1.2/)
 - Proof clarification: [`odd-ring-rank-theorem/v1.2.1-supplement/`](odd-ring-rank-theorem/v1.2.1-supplement/)
+- Additive errata + independent replication: [`odd-ring-rank-theorem/v1.2.2-supplement/`](odd-ring-rank-theorem/v1.2.2-supplement/)
 - Frozen v1.2 OSF DOI: [10.17605/OSF.IO/NM5BW](https://doi.org/10.17605/OSF.IO/NM5BW)
 
 The v1.2 materials remain frozen. The v1.2.1 supplement clarifies the proof
-without replacing the archived theorem.
+without replacing the archived theorem. The v1.2.2 supplement records two
+non-substantive textual corrections, an independent recomputation, and a
+terminology clarification without rewriting either earlier release.
 
 ## Separate fixed-benchmark certificate
 
@@ -46,3 +49,25 @@ extends the finite conclusion to every
 The [amplitude-region corollary](finite-benchmark/AMPLITUDE_REGION.md) also
 covers \(A\in[0.475795,0.529975]\) at \(\theta=0.08\) and an explicit
 two-parameter region at fixed \(M,k_{\rm idx}\).
+
+
+## Rank versus finite subset cardinality
+
+The matrix theorem and the fixed-benchmark subset problem use different
+quantities. `rank(V)=p` is the channel-space rank; `K_{0.001}` is the
+minimum number of selected channels needed to meet the fixed residual
+threshold.
+
+For the three documented M=99 mask cells:
+
+| theta | rank(V) | K_0.001 |
+|---:|---:|---:|
+| 0.07 | 42 | 14 |
+| 0.08 | 41 | 11 |
+| 0.09 | 40 | 12 |
+
+The rigorous theta=0.07 certificate is
+[`finite-benchmark/theta07-rank14/CERTIFICATE.md`](finite-benchmark/theta07-rank14/CERTIFICATE.md);
+the historical directory name is retained for stable links. Future-facing
+text uses “minimum passing channel cardinality” rather than calling
+`K_{0.001}` a rank.

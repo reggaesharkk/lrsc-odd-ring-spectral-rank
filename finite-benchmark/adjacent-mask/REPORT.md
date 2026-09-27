@@ -1,4 +1,4 @@
-# A mask transition raises the LRSC fixed benchmark rank to 12
+# A mask transition raises the LRSC fixed benchmark minimum passing cardinality to 12
 
 At \(M=99\), \(k_{\rm idx}=49\), \(A=1/2\), and relative complex \(L_2\) tolerance \(10^{-3}\), the minimum passing cardinality is **12 at \(\theta=0.09\)**. This is a finite, computer-assisted result for the channel construction in the [K=11 certificate](../k001-certificate/CERTIFICATE.md). The baseline at \(\theta=0.08\) has minimum 11. Moving the stress threshold across its first upper mask boundary therefore changes the certified minimum from 11 to 12.
 
@@ -6,12 +6,12 @@ At \(M=99\), \(k_{\rm idx}=49\), \(A=1/2\), and relative complex \(L_2\) toleran
 
 | Stress threshold | Active nodes | Change from 0.08 | Certified cardinality |
 | --- | ---: | --- | --- |
-| 0.07 | 83 | add nodes 41 and 58 | \(11\leq K_{0.001}\leq15\) |
+| 0.07 | 83 | add nodes 41 and 58 | **\(K_{0.001}=14\)** (later certificate) |
 | 0.08 | 81 | baseline | \(K_{0.001}=11\) (prior certificate) |
 | 0.09 | 79 | remove nodes 40 and 59 | **\(K_{0.001}=12\)** |
 
 The \(\theta=0.09\) result holds on the closed rational subinterval
-\([0.088346808,\,0.107144346]\), because every stress-mask decision remains unchanged there. The adjacent exact stress boundaries are approximately \(0.088346807373177\) and \(0.107144346727594\). Likewise, the \(\theta=0.07\) rank *range* holds on \([0.055791974,\,0.071206343]\). The endpoints of these stated rational subintervals are strictly separated from the corresponding stress levels by interval arithmetic. They are conservative subintervals of the complete mask cells.
+\([0.088346808,\,0.107144346]\), because every stress-mask decision remains unchanged there. The adjacent exact stress boundaries are approximately \(0.088346807373177\) and \(0.107144346727594\). Likewise, the later [theta=0.07 certificate](../theta07-rank14/CERTIFICATE.md) proves \(K_{0.001}=14\) throughout \([0.055791974,\,0.071206343]\). The endpoints of these stated rational subintervals are strictly separated from the corresponding stress levels by interval arithmetic. They are conservative subintervals of the complete mask cells.
 
 The minimizing eleven-channel subset at 0.09 is the old 0.08 witness, \(\{0,1,3,42,43,44,45,46,47,48,49\}\). Its directly enclosed squared residual moves from approximately \(4.6725937774\times10^{-7}\) at 0.08 to \(5.0156462692\times10^{-7}\) at 0.09, while the squared acceptance threshold moves from approximately \(5.0451567155\times10^{-7}\) to \(5.0039483309\times10^{-7}\). This explains the observed failure of that subset; the exhaustive search is what rules out *every other* eleven-channel choice.
 
@@ -40,7 +40,7 @@ For the twelve-channel witness
 \]
 The lower target squared norm is \(10^{35}c\geq50039483308509315172721015928750344\). Hence the upper witness score is strictly less than \(10^{-6}\) times this lower norm. Its displayed relative residual upper bound is \(0.000947945579\); the proof comparison uses integers, not this rounded display.
 
-At \(\theta=0.07\), the exhaustive integer search excludes \(K\leq10\), and a directly reconstructed fifteen-channel witness \(\{0,1,3,11,12,13,14,42,43,44,45,46,47,48,49\}\) passes with relative residual upper bound \(0.000995214189\). The intermediate ranks 11 through 14 have **not** been excluded; no exact minimum is claimed for that cell.
+At \(\theta=0.07\), this report originally established only the partial range \(11\leq K_{0.001}\leq15\). The later [rigorous coordinate certificate](../theta07-rank14/CERTIFICATE.md) excludes \(K=11,12,13\) and directly verifies a fourteen-channel witness, closing the result at **\(K_{0.001}=14\)**. The older fifteen-channel witness remains valid but is no longer minimal.
 
 ## Reproduction
 
@@ -61,4 +61,12 @@ The stored search outputs are split by cardinality to make the decisive run expl
 
 `independent_bitmask_k11.cpp` is provided as an optional second traversal. No completed output from it is claimed in this report; the exclusion certificate uses the completed recursive integer search and the Python winner-score check above.
 
-This finite threshold transition does not establish any continuum Navier–Stokes regularity estimate, a theorem for other LRSC parameter choices, or the unresolved exact minimum at \(\theta=0.07\).
+This finite threshold transition does not establish any continuum Navier–Stokes regularity estimate or a theorem for other LRSC parameter choices. The formerly unresolved exact minimum at \(\theta=0.07\) is now closed by the later certificate at \(K_{0.001}=14\).
+
+
+## Terminology update
+
+The values 11, 12, and 14 in these finite subset searches are values of
+(K_{0.001}), the minimum passing channel-subset cardinality. They are not
+the matrix rank from the odd-ring theorem. In the (	heta=0.09) cell the
+theorem rank is 40, while (K_{0.001}=12).
