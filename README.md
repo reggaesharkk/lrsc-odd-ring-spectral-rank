@@ -4,8 +4,8 @@
 
 **Prince Upadhyay — Independent Research**
 
-This repository contains the frozen LRSC odd-ring spectral rank theorem, its
-proof clarification, and a separate finite subset-selection certificate.
+I keep the frozen LRSC odd-ring spectral rank theorem here, alongside its
+proof clarification and a separate finite subset-selection certificate.
 
 ## Frozen rank theorem
 
